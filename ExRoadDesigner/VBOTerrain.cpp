@@ -258,9 +258,11 @@
 	}//
 
 	float VBOTerrain::getTerrainHeight(float xM,float yM,bool actual){
+		/*
 		if(!actual && (G::global()["3d_render_mode"]==0||G::global()["3d_render_mode"]==3)){//for Gen Mode it is flat
 			return 0.0f;
 		}
+		*/
 		float value255=terrainLayer.getValue(xM,yM);
 		const float maxHeight=7.0;//7=255*7 1785m (change in vertex as well)
 		float height=maxHeight*value255;

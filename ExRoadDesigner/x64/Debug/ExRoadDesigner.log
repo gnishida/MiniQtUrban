@@ -1,4 +1,4 @@
-﻿Build started 6/22/2014 2:16:22 PM.
+﻿Build started 6/22/2014 7:11:04 PM.
      1>Project "C:\Users\gen\Documents\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Debug\ExRoadDesigner.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -70,4 +70,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:19.49
+Time Elapsed 00:00:16.39

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ControlWidget.h'
 **
-** Created: Sun Jun 22 14:00:58 2014
+** Created: Sun Jun 22 18:37:17 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ControlWidget[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,9 +34,6 @@ static const uint qt_meta_data_ControlWidget[] = {
       24,   15,   14,   14, 0x0a,
       49,   15,   14,   14, 0x0a,
       69,   14,   14,   14, 0x0a,
-      94,   14,   14,   14, 0x0a,
-     110,   14,   14,   14, 0x0a,
-     129,   14,   14,   14, 0x0a,
 
        0        // eod
 };
@@ -44,8 +41,7 @@ static const uint qt_meta_data_ControlWidget[] = {
 static const char qt_meta_stringdata_ControlWidget[] = {
     "ControlWidget\0\0newValue\0"
     "updateTerrainLabels(int)\0updateRender2D(int)\0"
-    "changeTerrainShader(int)\0smoothTerrain()\0"
-    "contentDesign(int)\0contentDesignLevel()\0"
+    "smoothTerrain()\0"
 };
 
 void ControlWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -56,10 +52,7 @@ void ControlWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->updateTerrainLabels((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->updateRender2D((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->changeTerrainShader((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->smoothTerrain(); break;
-        case 4: _t->contentDesign((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->contentDesignLevel(); break;
+        case 2: _t->smoothTerrain(); break;
         default: ;
         }
     }
@@ -97,9 +90,9 @@ int ControlWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 3;
     }
     return _id;
 }

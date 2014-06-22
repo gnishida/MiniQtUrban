@@ -264,17 +264,17 @@ void GLWidget3D::drawScene(int drawMode) {
 	///////////////////////////////////
 	// GEN MODE
 	if(G::global().getInt("3d_render_mode")==0){
-		//vboRenderManager.renderStaticGeometry(QString("sky"));
 
+		//glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 0);//SHADOW: Disable
 		vboRenderManager.renderStaticGeometry(QString("sky"));
 		vboRenderManager.vboWater.render(vboRenderManager);
+		//glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 1);//SHADOW: Render Normal with Shadows
 
 		glDisable(GL_CULL_FACE);
 		mainWin->urbanGeometry->render(vboRenderManager);
 		glEnable(GL_CULL_FACE);
 		
 		vboRenderManager.vboTerrain.render(vboRenderManager);
-		vboRenderManager.vboWater.render(vboRenderManager);
 
 		// draw the selected vertex and edge
 		if (vertexSelected) {
@@ -296,14 +296,10 @@ void GLWidget3D::drawScene(int drawMode) {
 			glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 0);//SHADOW: Disable
 
 			// RENDER SKY WATER
-
 			vboRenderManager.renderStaticGeometry(QString("sky"));
 			vboRenderManager.vboWater.render(vboRenderManager);
-
-			
-
-			if(shadowEnabled)
-				glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 1);//SHADOW: Render Normal with Shadows
+						
+			glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 1);//SHADOW: Render Normal with Shadows
 
 			vboRenderManager.vboTerrain.render(vboRenderManager);
 
