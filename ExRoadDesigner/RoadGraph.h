@@ -57,16 +57,10 @@ public:
 	void generateMesh(VBORenderManager& renderManger, const QString &linesN, const QString &pointsN);
 
 	void clear();
-	//void setZ(float z);
 	void adaptToTerrain(VBORenderManager* vboRenderManager);
 
 private:
 	void _generateMeshVerticesDefault(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
-	void _generateMeshVerticesTexture(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
-	void _generateMeshVerticesGroupBy(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
-	void _generateMeshVerticesGenerationType(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
-	float getBridgeElevationFromClosestNeighbors(RoadVertexDesc srcDesc, VBORenderManager &renderManager, float seaLevel);
-	float getBridgeElevationFromClosestNeighbors(RoadEdgeDesc edge_desc, const Polyline2D &polyline, int index, VBORenderManager &renderManager, float seaLevel);
 };
 
 typedef boost::shared_ptr<RoadGraph> RoadGraphPtr;

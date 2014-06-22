@@ -1,12 +1,12 @@
-﻿Build started 6/22/2014 7:11:04 PM.
+﻿Build started 6/22/2014 7:20:34 PM.
      1>Project "C:\Users\gen\Documents\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Debug\ExRoadDesigner.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          All outputs are up-to-date.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /IC:\boost_1_53_0 /I.\GeneratedFiles /I. /IC:\Qt\4.8.1\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.1\include\QtCore /IC:\Qt\4.8.1\include\QtGui /IC:\Qt\4.8.1\include\QtXml /IC:\Qt\4.8.1\include\QtOpenGL /IC:\Qt\4.8.1\include\QtTest /I..\opencv\include\ /I..\glew\include\GL /Zi /nologo /W1 /WX- /MP /Od /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_XML_LIB /D QT_OPENGL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt GLWidget3D.cpp
-         GLWidget3D.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /IC:\boost_1_53_0 /I.\GeneratedFiles /I. /IC:\Qt\4.8.1\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.1\include\QtCore /IC:\Qt\4.8.1\include\QtGui /IC:\Qt\4.8.1\include\QtXml /IC:\Qt\4.8.1\include\QtOpenGL /IC:\Qt\4.8.1\include\QtTest /I..\opencv\include\ /I..\glew\include\GL /Zi /nologo /W1 /WX- /MP /Od /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_XML_LIB /D QT_OPENGL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt VBOTerrain.cpp
+         VBOTerrain.cpp
          All outputs are up-to-date.
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gen\Documents\GitHub\MiniQtUrban\x64\Debug\\ExRoadDesigner.exe" /NOLOGO /LIBPATH:C:\Qt\4.8.1\lib /LIBPATH:..\opencv\lib\ /LIBPATH:..\glew\lib qtmaind.lib QtCored4.lib QtGuid4.lib QtXmld4.lib QtOpenGLd4.lib opengl32.lib glu32.lib QtTestd4.lib opencv_core249d.lib opencv_highgui249d.lib opencv_imgproc249d.lib opencv_legacy249d.lib opencv_ml249d.lib opencv_photo249d.lib opencv_video249d.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\ExRoadDesigner.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\gen\Documents\GitHub\MiniQtUrban\x64\Debug\ExRoadDesigner.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gen\Documents\GitHub\MiniQtUrban\x64\Debug\ExRoadDesigner.lib" /MACHINE:X64 x64\Debug\BBox.obj
@@ -70,4 +70,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:16.39
+Time Elapsed 00:00:15.71
