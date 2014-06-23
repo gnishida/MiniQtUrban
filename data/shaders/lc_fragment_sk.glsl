@@ -165,52 +165,7 @@ void main(){
 	// TERRAIN
 	if((mode&0xFF)==3){
 		///////////////////////////
-		// 0 FLAT (Maps)
-		if(terrainMode==0){
-			float height=outColor.r;///COMPUTED IN VERTEX
-			if(height<=15){//water
-				if(height<=13){
-					outputF=vec4(0xa0/255.0,0xc3/255.0,0xff/255.0,1.0);//water blue
-				}else{
-					outputF=mix(
-						vec4(0x84/255.0,0xa9/255.0,0xe6/255.0,1.0),//water blue dark 92bbff (mine 84a9e6)
-						vec4(0xa0/255.0,0xc3/255.0,0xff/255.0,1.0),//water blue
-						(15.0f-height)*0.5f);
-				}
-			}else{
-				//outputF=vec4(0xf0/255.0,0xed/255.0,0xe5/255.0,1.0);//grey brighter
-				outputF=vec4(0xe9/255.0,0xe5/255.0,0xdc/255.0,1.0);//gray dark
-			}
-			return;
-		}
-		///////////////////////////
-		// 2 FLAT (Content Design)
-		if(terrainMode==2){
-			outputF=vec4(0,1,1,1);//0xe9/255.0,0xe5/255.0,0xdc/255.0,1.0);//gray dark
-			vec2 terrainTexCoord=vec2(
-				int(origVertex.x-terrain_size.x)/terrain_size.z,
-				int(origVertex.y-terrain_size.y)/terrain_size.w
-				);
-			float height=255.0f*texture(terrain_tex,terrainTexCoord.rg).r;
-
-			if(height<=6){//water
-				if(height<=0){
-					outputF=vec4(0x84/255.0,0xa9/255.0,0xe6/255.0,1.0);//water blue dark 92bbff (mine 84a9e6)
-				}else{
-					outputF=vec4(0xa0/255.0,0xc3/255.0,0xff/255.0,1.0);//water blue
-				}
-			}else{
-				outputF=vec4(0xe9/255.0,0xe5/255.0,0xdc/255.0,1.0);//gray dark
-				int heighStep=int(height-7);//index 0-4 (0 mid river, 1 green, 2 coast, 3 flat, 4 mountain)
-				if(heighStep<0)heighStep=0;
-				if(heighStep>4)heighStep=4;
-				outputF=vec4(terrainMode3Colors[heighStep],1.0);
-			}
-			return;
-		}
-		///////////////////////////
 		// 1 MOUNTAIN
-		if(terrainMode==1){
 			vec4 terrainColor=vec4(0,0,0,1.0);
 			float factor;
 			const float maxHeight=9.0;//7=255*7 1500m (change in vertex shader as well) HERE IS 9 TO ALLOW LESS HIGH MOUNTAINS
@@ -224,7 +179,6 @@ void main(){
 				texture( tex_3D, vec3(outUV.rg,texInd) ),
 				texture( tex_3D, vec3(outUV.rg,texInd+1) ),
 				interpTex/25.0);
-		}
 	}
 
 	//////////////

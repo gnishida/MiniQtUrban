@@ -65,7 +65,7 @@ void main(){
 	}
 	//////////////////////////////////////
 	// 2. ADAPT TO TERRAIN
-	if((((mode&0xFF)==0x03)||((mode&0x0100)==0x0100))&&terrainMode==1){// terrain or adapt to terrain (and terrainMode=1)
+	if ((mode&0xFF)==0x03 || (mode&0x0100)==0x0100) {// terrain or adapt to terrain
 		const float maxHeight=7.0;//7=255*7 1785m (change in fragment as well) !!!Also in VBOTerrain
 		vec2 terrainTexCoord=vec2(
 			(origVertex.x-terrain_size.x)/terrain_size.z,
