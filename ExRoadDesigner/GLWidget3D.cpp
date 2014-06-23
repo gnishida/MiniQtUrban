@@ -1,20 +1,4 @@
-﻿/*********************************************************************
-This file is part of QtUrban.
-
-    QtUrban is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, version 3 of the License.
-
-    QtUrban is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with QtUrban.  If not, see <http://www.gnu.org/licenses/>.
-***********************************************************************/
-
-#include "GLWidget3D.h"
+﻿#include "GLWidget3D.h"
 #include "Util.h"
 #include "GraphUtil.h"
 #include "MainWindow.h"
@@ -243,6 +227,14 @@ void GLWidget3D::initializeGL() {
 
 
 	G::global()["shader2D"] = false;
+
+	vboRenderManager.vboTerrain.updateTerrain(0,0,0,0);
+	mainWin->urbanGeometry->adaptToTerrain();
+	//shadow.makeShadowMap(this);
+	//updateGL();
+	G::global()["3d_render_mode"]=1;
+	camera3D.updateCamMatrix();
+
 }
 
 void GLWidget3D::resizeGL(int width, int height) {
@@ -263,7 +255,7 @@ void GLWidget3D::paintGL() {
 void GLWidget3D::drawScene(int drawMode) {
 	///////////////////////////////////
 	// GEN MODE
-	if(G::global().getInt("3d_render_mode")==0){
+	/*if(G::global().getInt("3d_render_mode")==0){
 
 		//glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 0);//SHADOW: Disable
 		vboRenderManager.renderStaticGeometry(QString("sky"));
@@ -271,8 +263,11 @@ void GLWidget3D::drawScene(int drawMode) {
 		//glUniform1i(glGetUniformLocation(vboRenderManager.program,"shadowState"), 1);//SHADOW: Render Normal with Shadows
 
 		glDisable(GL_CULL_FACE);
-		mainWin->urbanGeometry->render(vboRenderManager);
+		//mainWin->urbanGeometry->render(vboRenderManager);
+		//vboRenderManager.renderStaticGeometry(QString("roads_lines"));
+		vboRenderManager.renderStaticGeometry(QString("3d_roads"));
 		glEnable(GL_CULL_FACE);
+		
 		
 		vboRenderManager.vboTerrain.render(vboRenderManager);
 
@@ -289,7 +284,7 @@ void GLWidget3D::drawScene(int drawMode) {
 	}
 	///////////////////////////////////
 	// LC MODE
-	if(G::global().getInt("3d_render_mode")==1){//LC HATCH
+	if(G::global().getInt("3d_render_mode")==1){//LC HATCH*/
 
 		// NORMAL
 		if(drawMode==0){
@@ -305,7 +300,7 @@ void GLWidget3D::drawScene(int drawMode) {
 
 			vboRenderManager.renderStaticGeometry(QString("3d_sidewalk"));
 			vboRenderManager.renderStaticGeometry(QString("3d_roads"));
-
+			//vboRenderManager.renderStaticGeometry(QString("roads_lines"));
 			
 			vboRenderManager.renderStaticGeometry(QString("3d_roads_inter"));//
 			vboRenderManager.renderStaticGeometry(QString("3d_roads_interCom"));//
@@ -338,7 +333,7 @@ void GLWidget3D::drawScene(int drawMode) {
 				vboRenderManager.renderAllStreetElementName("streetLamp");//LC
 			}
 		}
-	}
+	//}
 }
 
 /**

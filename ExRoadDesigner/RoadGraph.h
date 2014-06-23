@@ -61,6 +61,7 @@ public:
 
 private:
 	void _generateMeshVerticesDefault(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
+	void _generateMeshVerticesDefault2(VBORenderManager& renderManager, const QString &linesN, const QString &pointsN);
 };
 
 typedef boost::shared_ptr<RoadGraph> RoadGraphPtr;

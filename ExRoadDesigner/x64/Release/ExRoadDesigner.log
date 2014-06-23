@@ -1,5 +1,5 @@
-﻿Build started 6/22/2014 7:30:48 PM.
-     1>Project "C:\Users\gen\Documents\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" on node 2 (build target(s)).
+﻿Build started 6/23/2014 11:34:28 AM.
+     1>Project "D:\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Release\ExRoadDesigner.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
@@ -9,12 +9,12 @@
          All outputs are up-to-date.
        Link:
          All outputs are up-to-date.
-         ExRoadDesigner.vcxproj -> C:\Users\gen\Documents\GitHub\MiniQtUrban\x64\Release\ExRoadDesigner.exe
+         ExRoadDesigner.vcxproj -> D:\GitHub\MiniQtUrban\x64\Release\ExRoadDesigner.exe
        FinalizeBuildStatus:
          Deleting file "x64\Release\ExRoadDesigner.unsuccessfulbuild".
          Touching "x64\Release\ExRoadDesigner.lastbuildstate".
-     1>Done Building Project "C:\Users\gen\Documents\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" (build target(s)).
+     1>Done Building Project "D:\GitHub\MiniQtUrban\ExRoadDesigner\ExRoadDesigner.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.26
+Time Elapsed 00:00:00.13
